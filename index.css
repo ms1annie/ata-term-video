@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 5px;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+section {
+    flex: 0 0 40px;
+    background-color: white;
+    color: black;
+    justify-content: space-between;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.header-flex-container {
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom: 1px;
+    border-color: orange;
+}
+
+.rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+  }
+  .rating > span {
+    display: inline-block;
+    position: relative;
+    width: 1.1em;
+  }
+  .rating > span:hover:before,
+  .rating > span:hover ~ span:before {
+     content: "\2605";
+     position: absolute;
+  }
+
+.main-flex-container {
+    overflow: auto;  
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: space-around;
+    color: black;
+}
+
+.squarebox img {
+    max-width: 70%;
+    max-height: 70%;
+    display: block;
+    margin: auto;
+}
+
+.squarebox {
+    width: 30%;
+    background-color: white;
+    margin: 5px;
+}
+
+.squarebox h3 {
+    font-size: 15px;
+    color: black;
+}
+
+.searchbox {
+    padding: 6px 10px;
+}
+
+/* For tablet */
+@media only screen and (max-width: 800px) {
+    .squarebox {
+         width: 40%;
+         background-color: white;
+         margin: 5px;
+    }
+}
+
+/* For mobile */
+@media only screen and (max-width: 500px) {
+    .squarebox {
+         width: 100%;
+         background-color: white;
+         margin: 5px;
+    }
+}
